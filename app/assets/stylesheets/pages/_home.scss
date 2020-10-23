@@ -1,4 +1,7 @@
 // Specific CSS for your home-page
+body {
+  background-color: white;
+}
 #banner-typed-text {
   letter-spacing: 5px;
   width: 100%;
@@ -20,7 +23,7 @@
   flex-grow: 1;
   grid-gap: 16px;
   padding: 15px 10px;
-  background-color: white;
+  background-color: #CACFD2;
   border-radius: 4px;
 
 }

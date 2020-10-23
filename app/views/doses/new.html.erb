@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1"><i class="far fa-moon"></i>ocktails <i class="fas fa-cocktail"></i></span>
+  <p><%= link_to 'Back to Main', cocktails_path %></p>
+</nav>
+
+<div class="container">
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: @ingredients.order('name ASC') %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+</div>

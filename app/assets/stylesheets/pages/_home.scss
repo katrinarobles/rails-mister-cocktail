@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.container {
+  width: 500px;
+  margin: 30px;
+}
+
+.container-main {
+  text-align: center;
+}
+.card-individual {
+  width: 300px;
+  margin: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  padding: 10px;
+  border: 1px solid rgb(230,230,230);
+   src {
+    object: fit;
+  }
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  height: 200px;
+}

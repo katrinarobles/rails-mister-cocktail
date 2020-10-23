@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+#banner-typed-text {
+  letter-spacing: 5px;
+  width: 100%;
+}
 .container-form {
   width: 500px;
   margin: 30px;
@@ -6,10 +10,21 @@
 
 .container-show {
   display: flex;
-  justify-content: space-around;
   margin: 5px;
   padding: 5px;
+  width: 800px;
+  justify-content: space-around;
+  align-items: center;
 }
+.card-show {
+  flex-grow: 1;
+  grid-gap: 16px;
+  padding: 15px 10px;
+  background-color: white;
+  border-radius: 4px;
+
+}
+
 .container-main {
   text-align: center;
 }
@@ -18,19 +33,39 @@
   margin: 10px;
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
-  padding: 10px;
   border: 1px solid rgb(230,230,230);
 }
 
 .cards {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 10px;
 }
-
 .card-body {
   background-color: #f8f9fa;
   height: 200px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 5px
 }
+.card-body2 {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Container media queries */
+@media (min-width: 500px) {
+  .container {
+    width: 400px;
+  }
+}
+
+
 
 a {
   text-decoration: none;

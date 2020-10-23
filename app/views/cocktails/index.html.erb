@@ -3,13 +3,14 @@
   <p><%= link_to 'Make new Cocktails', new_cocktail_path, class: 'button' %></p>
 </nav>
 <div class="container-main">
-  <h1> A lot can happen with just one drink </h1>
+  <span id="banner-typed-text"></span>
   <div class='cards'>
     <% @cocktails.each do |cocktail| %>
 
       <div class="card-individual">
-      <%= link_to cl_image_tag(cocktail.photo.key, width: 280 ), cocktail_path(cocktail) %>
-
+        <div class="card-body">
+          <%= link_to cl_image_tag(cocktail.photo.key, width: 250 ), cocktail_path(cocktail) %>
+        </div>
         <div class="card-body">
           <h3><%= cocktail.name %></h3>
           <p class="card-text"> <%= cocktail.description %></p>

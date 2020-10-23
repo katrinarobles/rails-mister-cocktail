@@ -2,7 +2,7 @@
   <span class="navbar-brand mb-0 h1"> <i class="far fa-moon"></i>ocktails  <i class="fas fa-cocktail"></i></span>
   <p><%= link_to 'Back to Main', cocktails_path, class: 'button' %></p>
 </nav>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(http://res.cloudinary.com/dolfny7hf/image/upload/<%= @cocktail.photo.key %>)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
   <h1><%= @cocktail.name %></h1>
 </div>
 <div class='container-show'>

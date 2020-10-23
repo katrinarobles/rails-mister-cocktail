@@ -10,7 +10,9 @@
 
       <div class="card-individual">
         <div class="card-body">
-          <%= link_to cl_image_tag(cocktail.photo.key, width: 250 ), cocktail_path(cocktail) %>
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= cl_image_tag cocktail.photo.key, height: 250, crop: :fill %>
+            <% end  %>
         </div>
         <div class="card-body">
           <h3><%= cocktail.name %></h3>

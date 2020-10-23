@@ -1,9 +1,15 @@
 // Specific CSS for your home-page
-.container {
+.container-form {
   width: 500px;
   margin: 30px;
 }
 
+.container-show {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
+}
 .container-main {
   text-align: center;
 }
@@ -14,10 +20,8 @@
   box-shadow: 0 0 5px rgb(230,230,230);
   padding: 10px;
   border: 1px solid rgb(230,230,230);
-   src {
-    object: fit;
-  }
 }
+
 .cards {
   display: flex;
   justify-content: space-around;
@@ -26,4 +30,70 @@
 .card-body {
   background-color: #f8f9fa;
   height: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+   &:hover {
+     background-color: grey;
+     color: white;
+     text-decoration: none;
+     border-radius: 12px;
+     opacity: .5;
+    }
+}
+
+.button {
+  background-color: #483d8b;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
+  font-size: 15px;
+}
+
+.button:hover {
+  background-color: #483d8b;
+  opacity: .5;
+  color: white;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

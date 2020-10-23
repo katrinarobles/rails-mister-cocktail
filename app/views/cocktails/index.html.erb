@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-brand mb-0 h1"> <i class="far fa-moon"></i>ocktails  <i class="fas fa-cocktail"></i></span>
-  <p><%= link_to 'Make new Cocktails', new_cocktail_path %></p>
+  <p><%= link_to 'Make new Cocktails', new_cocktail_path, class: 'button' %></p>
 </nav>
 <div class="container-main">
   <h1> A lot can happen with just one drink </h1>
@@ -8,15 +8,14 @@
     <% @cocktails.each do |cocktail| %>
 
       <div class="card-individual">
-        <img class="card-img-top" src="https://www.davidlebovitz.com/wp-content/uploads/2018/05/Strawberry-Margaritas-10.jpg">
+      <%= link_to cl_image_tag(cocktail.photo.key, width: 280 ), cocktail_path(cocktail) %>
 
         <div class="card-body">
           <h3><%= cocktail.name %></h3>
           <p class="card-text"> <%= cocktail.description %></p>
         </div>
-
         <div class="card-body2">
-          <%= link_to 'See Details', cocktail_path(cocktail) %>
+          <%= link_to 'See Details', cocktail_path(cocktail), class: 'button' %>
         </div>
 
       </div>

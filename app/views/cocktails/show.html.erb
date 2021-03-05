@@ -1,10 +1,8 @@
-<nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1"> <i class="far fa-moon"></i><%= link_to 'ocktails', cocktails_path %>  <i class="fas fa-cocktail"></i></span>
-  <p><%= link_to 'Back to Main', cocktails_path, class: 'button' %></p>
-</nav>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
   <h1><%= @cocktail.name %></h1>
 </div>
+
 <div class='container-show'>
 
   <div class='card-show'>
@@ -13,13 +11,22 @@
   </div>
 
   <div class='card-show'>
+    <h3> Ingredients </h3>
     <ul>
       <% @cocktail.doses.each do |dose| %>
         <li><%= dose.description %>
-        <%= Ingredient.find(dose.ingredient_id).name %>
+        <%= dose.ingredient.name %>
         <%= link_to 'delete', cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure you would like to delete?" } %></li>
       <% end %>
     </ul>
-    <p><%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail), class: 'button' %> </p>
+
   </div>
+</div>
+<div class="container">
+  <h3> Add an Ingredient </h3>
+    <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient, collection: @ingredients.order('name ASC') %>
+      <%= f.submit "Submit review", class: "btn btn-primary" %>
+    <% end %>
 </div>

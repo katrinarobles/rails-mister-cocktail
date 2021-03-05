@@ -13,6 +13,10 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <span> <i class="far fa-moon"></i>ocktails  <i class="fas fa-cocktail"></i></span>
+      <p><%= link_to 'Make new Cocktails', new_cocktail_path, class: 'button' %> <%= link_to 'Back to Main', cocktails_path, class: 'button' %></p>
+    </nav>
     <%= yield %>
   </body>
 </html>

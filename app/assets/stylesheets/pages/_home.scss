@@ -2,9 +2,19 @@
 body {
   background-color: white;
 }
+
+.navbar {
+  // [...]
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar {
+  background-color: white;
+}
 #banner-typed-text {
   letter-spacing: 5px;
-  width: 100%;
+  width: 200%;
 }
 .container-form {
   width: 500px;
@@ -13,7 +23,7 @@ body {
 
 .container-show {
   display: flex;
-  margin: 5px;
+  margin: 5px auto;
   padding: 5px;
   width: 800px;
   justify-content: space-around;
@@ -23,7 +33,6 @@ body {
   flex-grow: 1;
   grid-gap: 16px;
   padding: 15px 10px;
-  background-color: #CACFD2;
   border-radius: 4px;
 
 }
@@ -35,7 +44,7 @@ body {
   width: 300px;
   margin: 10px;
   border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  box-shadow: 0 0 3px rgb(230,230,230);
   border: 1px solid rgb(230,230,230);
 }
 
@@ -83,10 +92,12 @@ a {
 }
 
 .button {
-  background-color: #483d8b;
-  color: white;
+  color: black;
   padding: 10px 10px;
   border-radius: 15px;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
   display: inline-block;
   text-decoration: none;
   transition: .3s;
@@ -94,21 +105,20 @@ a {
 }
 
 .button:hover {
-  background-color: #483d8b;
-  opacity: .5;
-  color: white;
+  opacity: 0.1;
+  transition-duration: 1s;
+  color: black;
 }
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: black;
   font-size: 32px;
   font-weight: bold;
 }
@@ -117,7 +127,6 @@ a {
   font-size: 20px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 
@@ -133,5 +142,5 @@ a {
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
